@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>PsiTransfer Info</title>
+  <link href="/assets/favicon.ico" rel="icon" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <link href="/assets/styles.css" rel="stylesheet">
+  <script>
+    // Add ployfills for stupid IE
+    if (document.documentMode || /Edge/.test(navigator.userAgent)) {
+      (function(d, script) {
+        script = d.createElement('script');
+        script.type = 'text/javascript';
+        script.async = false;
+        script.src = '/assets/babel-polyfill.js';
+        d.getElementsByTagName('head')[0].appendChild(script);
+      }(document));
+    }
+  </script>
+  <style>
+    body { background-color: rgb(1, 10, 100); }
+    .container > h1 { color: #eef3fb; }
+    .container > hr:first-of-type { border-color: rgba(255,255,255,0.25); }
+
+    .info-section { margin-bottom: 20px; }
+    .info-section .panel-heading h2 { margin: 0; font-size: 18px; }
+
+    .filetypes-well h4 { margin: 8px 0 0; }
+
+    .confidential-flex { display: flex; gap: 24px; align-items: flex-start; }
+    .confidential-flex .lock-col { flex: 0 0 90px; }
+    .confidential-flex .lock-col img { width: 100%; height: auto; }
+    .confidential-flex .text-col { flex: 1 1 auto; }
+
+    footer ~ center { color: #d7e6fb; }
+    footer ~ center a { color: #eaf2ff; }
+    footer ~ center hr { border-color: rgba(255,255,255,0.25); }
+
+    @media (max-width: 700px) {
+      .confidential-flex { flex-direction: column; }
+      .confidential-flex .lock-col { flex-basis: auto; width: 90px; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <a class="btn btn-sm btn-info btn-new-session" href="/" title="Home">
+      <svg viewBox="0 0 24 24" width="14" height="14" role="presentation" style="fill:#fff;vertical-align:-2px;margin-right:6px"><path d="M12 3l9 8h-3v9h-5v-6H11v6H6v-9H3z"></path></svg>
+      Home
+    </a>
+    <h1>
+      <svg version="1.1" role="presentation" viewBox="0 0 1920 1792" class="fa-icon" style="fill: #0275D8">
+        <path d="M1280 864q0-14-9-23l-352-352q-9-9-23-9t-23 9l-351 351q-10 12-10 24 0 14 9 23t23 9h224v352q0 13 9.5 22.5t22.5 9.5h192q13 0 22.5-9.5t9.5-22.5v-352h224q13 0 22.5-9.5t9.5-22.5zM1920 1152q0 159-112.5 271.5t-271.5 112.5h-1088q-185 0-316.5-131.5t-131.5-316.5q0-130 70-240t188-165q-2-30-2-43 0-212 150-362t362-150q156 0 285.5 87t188.5 231q71-62 166-62 106 0 181 75t75 181q0 76-41 138 130 31 213.5 135.5t83.5 238.5z"></path>
+      </svg>
+      Transfer Info
+    </h1>
+    <hr>
+
+    <div class="well filetypes-well info-section">
+      <h2 style="display: inline-block">Allowed file types:</h2>
+      <h4 style="display: inline-block">&nbsp;&nbsp;&nbsp;txt docx xlsx pptx pdf zip gif jpg mp4 tiff mpg avi mov 3gpp</h4>
+    </div>
+
+    <div class="panel panel-default info-section">
+      <div class="panel-heading"><h2>How to use PsiTransfer?</h2></div>
+      <div class="panel-body">
+        <ul>
+          <li>Drag-and-drop multiple files or one or more folders (including subfolders) onto the drop-off page &mdash; the folder structure is preserved.</li>
+          <li>Click on the &ldquo;<font size="+2">+</font> Drop your files here&rdquo; to select individual files, or use the folder icon to select a whole folder at once.</li>
+          <li>Uploaded folders show up as a clickable folder tree &mdash; select a folder to see just its contents, both when uploading and when downloading.</li>
+          <li>If needed change the retention time and fill in a password</li>
+          <li>Click the upload button</li>
+          <li>Share the download link&hellip; that's it.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="panel panel-default info-section">
+      <div class="panel-heading"><h2>Get notified when your file is downloaded</h2></div>
+      <div class="panel-body">
+        <ul>
+          <li>Tick &ldquo;Notify me by email when this is downloaded&rdquo; on the upload page and enter your email address.</li>
+          <li>You'll receive <b>one</b> email the first time any file in that share is downloaded &mdash; further downloads of the same share won't send additional emails, so your mailbox doesn't fill up if many people download the same files.</li>
+          <li>The notification email is just an alert &mdash; it does not contain a download link or the file itself.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="panel panel-default info-section">
+      <div class="panel-heading"><h2>How secure is PsiTransfer?</h2></div>
+      <div class="panel-body">
+        <ul>
+          <li>All files are transferred across the internet securely encrypted with https.</li>
+          <li>Uploaded data is only held for a maximum of the retention time set during upload, after which time it is automatically deleted. There is no &quot;undelete&quot; facility available at all.</li>
+          <li>Your files are only accessible with the link provided after the upload. Without that link there's no access to your files.</li>
+          <li><b>If an uploaded file has been deleted, there is no way of recovering the file.</b></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="panel panel-default info-section">
+      <div class="panel-heading"><h2>Personal or confidential data?</h2></div>
+      <div class="panel-body confidential-flex">
+        <div class="lock-col">
+          <img src="/assets/lock.jpg" alt="Lock">
+        </div>
+        <div class="text-col">
+          <ul>
+            <li>If you want to sent personal or confidential data, use the password option.</li>
+            <li>The same password must be used when downloading the content.</li>
+            <li>The passphrase is stored encrypted and cannot be recovered if lost.</li>
+            <li><b>No one can access the files without your password.</b></li>
+          </ul>
+          <b>Tips:</b>
+          <ul>
+            <li>Keep the retention time, which can be set on the upload page, to 1 hour.</li>
+            <li>Email the link to the recipient, call the recipient and inform about the link and exchange the password. <b>do not mail the password!</b></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer"></footer>
+  <center>Powered by PsiTransfer
+    <hr>
+  </center>
+
+  <script src="/app/common.js"></script>
+  <script src="/app/admin.js"></script>
+
+</body>
+
+</html>

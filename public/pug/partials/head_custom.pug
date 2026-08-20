@@ -1,0 +1,82 @@
+style.
+  body { background-color: rgb(1, 10, 100); }
+
+  /* text sitting directly on the blue background (not inside a .well/.panel/.alert,
+     which already have their own opaque light backgrounds and correct dark text) */
+  .container > h1 { color: #eef3fb; }
+  footer ~ center { color: #d7e6fb; }
+  footer ~ center a { color: #eaf2ff; }
+  footer ~ center hr { border-color: rgba(255,255,255,0.25); }
+  /* keep the last link clear of mobile browser chrome (bottom toolbar/gesture bar) */
+  footer ~ center .container.text-center {
+    padding-bottom: 48px;
+    padding-bottom: calc(48px + env(safe-area-inset-bottom, 0px));
+  }
+  footer ~ center .container.text-center a {
+    display: inline-block;
+    padding: 10px 4px;
+  }
+
+  /* folder navigation tree (upload + download pages) */
+  .folder-tree-pane {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    overflow-y: auto;
+    max-height: 220px;
+  }
+  .folder-tree-item {
+    cursor: pointer;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-right: 10px;
+    border-left: 4px solid transparent;
+  }
+  .folder-tree-item:hover {
+    background-color: #f5f5f5;
+  }
+  .folder-tree-item.selected {
+    background-color: #e7f1fb;
+    border-left: 4px solid #2b6cb0;
+    font-weight: bold;
+  }
+
+  /* cap an oversized image preview thumbnail to icon-like size */
+  .file-icon img {
+    max-width: 48px;
+    max-height: 48px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+  }
+
+  /* let a long file list scroll internally instead of stretching the whole page */
+  .upload-files .table-striped {
+    display: block;
+    max-height: 500px;
+    overflow-y: auto;
+  }
+  .upload-files .table-striped tbody {
+    display: table;
+    width: 100%;
+  }
+
+  /* balance the empty-state Files box against the Settings box's natural height,
+     without tying them together (that caused runaway stretching once files/images
+     are present - see .table-striped max-height above, which handles that instead) */
+  .empty-files-big-plus {
+    min-height: 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* clickable, sortable admin table column headers */
+  .sortable {
+    cursor: pointer;
+    user-select: none;
+  }
+  .sortable:hover {
+    background-color: #f5f5f5;
+  }

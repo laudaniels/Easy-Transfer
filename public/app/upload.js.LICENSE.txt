@@ -1,0 +1,21 @@
+/*!
+ * vuex v3.6.2
+ * (c) 2021 Evan You
+ * @license MIT
+ */
+
+/*! drag-drop. MIT License. Feross Aboukhadijeh <https://feross.org/opensource> */
+
+/*! queue-microtask. MIT License. Feross Aboukhadijeh <https://feross.org/opensource> */
+
+/*! run-parallel. MIT License. Feross Aboukhadijeh <https://feross.org/opensource> */
+
+/**
+ * @module QRCode
+ * @package @nuintun/qrcode
+ * @license MIT
+ * @version 5.0.2
+ * @author nuintun <nuintun@qq.com>
+ * @description A pure JavaScript QRCode encode and decode library.
+ * @see https://github.com/nuintun/qrcode#readme
+ */
