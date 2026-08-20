@@ -1,15 +1,15 @@
-  .idea
-  .history
-  screenshots
-  data
-  temp
-  node_modules
-  npm-debug.log
-  _releases
+.idea
+.history
+screenshots
+data
+temp
+node_modules
+npm-debug.log
+_releases
 
-  # per-environment config overrides (may contain secrets) - see config.js header
-  config.*.js
-  .env
-  .env.*
-  *.pem
-  *.key
+# per-environment config overrides (may contain secrets) - see config.js header
+config.*.js
+.env
+.env.*
+*.pem
+*.key
