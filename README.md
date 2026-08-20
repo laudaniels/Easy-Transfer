@@ -1,4 +1,4 @@
-# PsiTransfer
+# Easy-Transfer
 
 Simple open source self-hosted file sharing solution.
 It's an alternative to paid services like Dropbox, WeTransfer.
